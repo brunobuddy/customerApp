@@ -20,12 +20,21 @@ h1,
     @extend %m-y-headings;
     @extend .bold;
     @include media-xs {
+        @include bw-text(display2);
+    }
+}
+h2,
+.h2 {
+    @include bw-text(display1);
+    @extend %m-y-headings;
+    @extend .bold;
+    @include media-xs {
         @include bw-text(headline2);
     }
 }
 
-h2, h3, h4,
-.h2, .h3, .h4{
+h3, h4,
+.h3, .h4{
     @include bw-text(headline2);
     @extend %m-y-headings;
     @extend .bold;

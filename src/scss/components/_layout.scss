@@ -25,3 +25,21 @@ body {
         @include bw-text(body2);
     }
 }
+
+.branded {
+    header {
+        height: $headerHome;
+        @include media-sm {
+            height: $headerHome-sm
+        }
+    }
+    section {
+        height: calc(100vh - (142px + 54px);
+        @include media-sm {
+            height: calc(100vh - 185px);
+        }
+    }
+    footer {
+        height: $footerHome;
+    }
+}
