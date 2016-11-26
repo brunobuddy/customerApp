@@ -1,0 +1,12 @@
+### Sass ###
+.sass-cache/
+*.css.map
+
+### Compiled files
+assets/css/main.css
+assets/css/main.min.css
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride

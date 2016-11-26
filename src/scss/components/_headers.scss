@@ -1,0 +1,26 @@
+/**
+*    HEADERS
+*
+*       #General
+*
+*/
+
+/********************\
+    GENERAL
+\********************/
+
+.logo-wrap {
+
+    display: inline-block;
+    border-radius: 120px;
+    overflow: hidden;
+    width: 64px;
+
+    @include media-sm {
+        width: 104px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
