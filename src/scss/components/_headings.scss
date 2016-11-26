@@ -3,3 +3,44 @@
 *
 *    #General
 */
+
+
+//*********************
+//    Headings
+//*********************
+
+%m-y-headings {
+    margin-top: $m-t;
+    margin-bottom: $m-b;
+}
+
+h1,
+.h1 {
+    @include bw-text(display3);
+    @extend %m-y-headings;
+    @extend .bold;
+    @include media-xs {
+        @include bw-text(headline2);
+    }
+}
+
+h2, h3, h4,
+.h2, .h3, .h4{
+    @include bw-text(headline2);
+    @extend %m-y-headings;
+    @extend .bold;
+    @include media-xs {
+        @include bw-text(headline1);
+    }
+}
+
+h5, h6,
+.h5, .h6 {
+    @include bw-text(title);
+    @extend %m-y-headings;
+    @extend .bold;
+    text-transform: uppercase;
+    @include media-xs {
+        @include bw-text(body2);
+    }
+}
