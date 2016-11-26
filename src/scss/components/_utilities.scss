@@ -2,3 +2,119 @@
 *    utilities
 *
 */
+
+// Position
+.pos-r { position: relative; }
+
+// Spacing utilities
+
+$sizes :
+    ('xs', 0.4, 4),
+    ('sm', 0.8, 8),
+    ('md', 1.6, 16),
+    ('gutter', 2, 20),
+    ('lg', 3.2, 25),
+    ('xl', 4.8, 40),
+    ('xxl', 8.5, 60);
+
+// Margin
+.m-a-0 { margin:        0 !important; }
+.m-t-0 { margin-top:    0 !important; }
+.m-r-0 { margin-right:  0 !important; }
+.m-b-0 { margin-bottom: 0 !important; }
+.m-l-0 { margin-left:   0 !important; }
+.m-x-0 { margin-right:  0 !important; margin-left:   0 !important; }
+.m-y-0 { margin-top:    0 !important; margin-bottom: 0 !important; }
+.m-x-auto { margin-right:  auto !important; margin-left:   auto !important; }
+
+
+// Padding
+.p-a-0 { padding:        0 !important; }
+.p-t-0 { padding-top:    0 !important; }
+.p-r-0 { padding-right:  0 !important; }
+.p-b-0 { padding-bottom: 0 !important; }
+.p-l-0 { padding-left:   0 !important; }
+.p-x-0 { padding-left:   0 !important; padding-right: 0 !important; }
+.p-y-0 { padding-top:    0 !important; padding-bottom: 0 !important; }
+
+@each $size, $em, $vw in $sizes {
+    .m-a-#{$size} { margin: #{$em}rem !important; }
+    .m-t-#{$size} { margin-top: #{$em}rem !important; }
+    .m-r-#{$size} { margin-right: #{$em}rem !important; }
+    .m-b-#{$size} { margin-bottom: #{$em}rem !important; }
+    .m-l-#{$size} { margin-left: #{$em}rem !important; }
+    .m-x-#{$size} { margin-right: #{$em}rem !important; margin-left: #{$em}rem !important; }
+    .m-y-#{$size} { margin-top: #{$em}rem !important; margin-bottom: #{$em}rem !important; }
+
+    .p-a-#{$size} { padding: #{$em}rem !important; }
+    .p-t-#{$size} { padding-top: #{$em}rem !important; }
+    .p-r-#{$size} { padding-right: #{$em}rem !important; }
+    .p-b-#{$size} { padding-bottom: #{$em}rem !important; }
+    .p-l-#{$size} { padding-left: #{$em}rem !important; }
+    .p-x-#{$size} { padding-right: #{$em}rem !important; padding-left: #{$em}rem !important; }
+    .p-y-#{$size} { padding-top: #{$em}rem !important; padding-bottom: #{$em}rem !important; }
+
+    .m-vw-a-#{$size} { margin: #{$vw}vw !important; }
+    .m-vw-t-#{$size} { margin-top: #{$vw}vw !important; }
+    .m-vw-r-#{$size} { margin-right: #{$vw}vw !important; }
+    .m-vw-b-#{$size} { margin-bottom: #{$vw}vw !important; }
+    .m-vw-l-#{$size} { margin-left: #{$vw}vw !important; }
+    .m-vw-x-#{$size} { margin-right: #{$vw}vw !important; margin-left: #{$vw}vw !important; }
+    .m-vw-y-#{$size} { margin-top: #{$vw}vw !important; margin-bottom: #{$vw}vw !important; }
+
+    .p-vw-a-#{$size} { padding: #{$vw}vw !important; }
+    .p-vw-t-#{$size} { padding-top: #{$vw}vw !important; }
+    .p-vw-r-#{$size} { padding-right: #{$vw}vw !important; }
+    .p-vw-b-#{$size} { padding-bottom: #{$vw}vw !important; }
+    .p-vw-l-#{$size} { padding-left: #{$vw}vw !important; }
+    .p-vw-x-#{$size} { padding-right: #{$vw}vw !important; padding-left: #{$vw}vw !important; }
+    .p-vw-y-#{$size} { padding-top: #{$vw}vw !important; padding-bottom: #{$vw}vw !important; }
+
+    .xs-m-a-#{$size} { @include media-xs {margin: #{$em}rem !important; }}
+    .xs-m-t-#{$size} { @include media-xs {margin-top: #{$em}rem !important; }}
+    .xs-m-r-#{$size} { @include media-xs {margin-right: #{$em}rem !important; }}
+    .xs-m-b-#{$size} { @include media-xs {margin-bottom: #{$em}rem !important; }}
+    .xs-m-l-#{$size} { @include media-xs {margin-left: #{$em}rem !important; }}
+    .xs-m-x-#{$size} { @include media-xs {margin-right: #{$em}rem !important; margin-left: #{$em}rem !important; }}
+    .xs-m-y-#{$size} { @include media-xs {margin-top: #{$em}rem !important; margin-bottom: #{$em}rem !important; }}
+
+    .xs-p-a-#{$size} { @include media-xs { padding: #{$em}rem !important; }}
+    .xs-p-t-#{$size} { @include media-xs { padding-top: #{$em}rem !important; }}
+    .xs-p-r-#{$size} { @include media-xs { padding-right: #{$em}rem !important; }}
+    .xs-p-b-#{$size} { @include media-xs { padding-bottom: #{$em}rem !important; }}
+    .xs-p-l-#{$size} { @include media-xs { padding-left: #{$em}rem !important; }}
+    .xs-p-x-#{$size} { @include media-xs { padding-right: #{$em}rem !important; padding-left: #{$em}rem !important; }}
+    .xs-p-y-#{$size} { @include media-xs { padding-top: #{$em}rem !important; padding-bottom: #{$em}rem !important; }}
+
+    .sm-m-a-#{$size} { @include media-sm {margin: #{$em}rem !important; }}
+    .sm-m-t-#{$size} { @include media-sm {margin-top: #{$em}rem !important; }}
+    .sm-m-r-#{$size} { @include media-sm {margin-right: #{$em}rem !important; }}
+    .sm-m-b-#{$size} { @include media-sm {margin-bottom: #{$em}rem !important; }}
+    .sm-m-l-#{$size} { @include media-sm {margin-left: #{$em}rem !important; }}
+    .sm-m-x-#{$size} { @include media-sm {margin-right: #{$em}rem !important; margin-left: #{$em}rem !important; }}
+    .sm-m-y-#{$size} { @include media-sm {margin-top: #{$em}rem !important; margin-bottom: #{$em}rem !important; }}
+
+    .sm-p-a-#{$size} { @include media-sm { padding: #{$em}rem !important; }}
+    .sm-p-t-#{$size} { @include media-sm { padding-top: #{$em}rem !important; }}
+    .sm-p-r-#{$size} { @include media-sm { padding-right: #{$em}rem !important; }}
+    .sm-p-b-#{$size} { @include media-sm { padding-bottom: #{$em}rem !important; }}
+    .sm-p-l-#{$size} { @include media-sm { padding-left: #{$em}rem !important; }}
+    .sm-p-x-#{$size} { @include media-sm { padding-right: #{$em}rem !important; padding-left: #{$em}rem !important; }}
+    .sm-p-y-#{$size} { @include media-sm { padding-top: #{$em}rem !important; padding-bottom: #{$em}rem !important; }}
+
+    .md-m-a-#{$size} { @include media-md {margin: #{$em}rem !important; }}
+    .md-m-t-#{$size} { @include media-md {margin-top: #{$em}rem !important; }}
+    .md-m-r-#{$size} { @include media-md {margin-right: #{$em}rem !important; }}
+    .md-m-b-#{$size} { @include media-md {margin-bottom: #{$em}rem !important; }}
+    .md-m-l-#{$size} { @include media-md {margin-left: #{$em}rem !important; }}
+    .md-m-x-#{$size} { @include media-md {margin-right: #{$em}rem !important; margin-left: #{$em}rem !important; }}
+    .md-m-y-#{$size} { @include media-md {margin-top: #{$em}rem !important; margin-bottom: #{$em}rem !important; }}
+
+    .md-p-a-#{$size} { @include media-md { padding: #{$em}rem !important; }}
+    .md-p-t-#{$size} { @include media-md { padding-top: #{$em}rem !important; }}
+    .md-p-r-#{$size} { @include media-md { padding-right: #{$em}rem !important; }}
+    .md-p-b-#{$size} { @include media-md { padding-bottom: #{$em}rem !important; }}
+    .md-p-l-#{$size} { @include media-md { padding-left: #{$em}rem !important; }}
+    .md-p-x-#{$size} { @include media-md { padding-right: #{$em}rem !important; padding-left: #{$em}rem !important; }}
+    .md-p-y-#{$size} { @include media-md { padding-top: #{$em}rem !important; padding-bottom: #{$em}rem !important; }}
+}

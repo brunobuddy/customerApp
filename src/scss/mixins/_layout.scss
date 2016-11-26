@@ -1,1 +1,19 @@
 // Layout Properties
+
+// **************************
+// Background
+// **************************
+
+// White and Black
+
+.bg-night { background-color: #051039;}
+.bg-smoke { background-color: #82879C;}
+.bg-cloud { background-color: #95989A;}
+.bg-light { background-color: #ffffff;}
+
+// Brand
+.bg-primary { background-color: $night;}
+.bg-success { background-color: #4CD684;}
+.bg-info { background-color: #A2EED9;}
+.bg-warning { background-color: #E9D186;}
+.bg-danger { background-color: #E4554D;}

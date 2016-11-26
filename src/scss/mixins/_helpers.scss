@@ -1,1 +1,54 @@
 // Helpers Properties
+
+/*-----------------------------------*\
+#Responsive Bootstrap Mobile First
+\*-----------------------------------*/
+
+//
+//   Declare the mixins in the same order as they appear below
+//
+//   @see https://css-tricks.com/logic-in-media-queries/
+//
+//   @usage SASS
+//       .sidebar {
+//           width: 100%;
+//
+//           @include media-lg {
+//               width: 30%;
+//           }
+//       }
+//
+//   @output
+//       .sidebar {
+//           width: 100%;
+//
+//           @media screen and (min-width: 1281px) {
+//               width: 30%;
+//           }
+//       }
+//
+//
+
+@mixin media-xs {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

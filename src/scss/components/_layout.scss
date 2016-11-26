@@ -1,3 +1,27 @@
 /*
 *    LAYOUT
+*
+*       #general
 */
+
+/********************\
+GENERAL
+\********************/
+
+html {
+    overflow-x: hidden;
+    font-size: $bw-base-font-size;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: $bw-base-line-height;
+    @extend .text-night;
+    @include bw-text(title);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include media-xs {
+        @include bw-text(body2);
+    }
+}
