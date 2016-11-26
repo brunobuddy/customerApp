@@ -7,3 +7,117 @@
 *       #Button Style
 *       #Button Size
 */
+
+
+// When creating a button, first set the 'bw-btn" class.
+// Then, just choose a btn color, for exemple, bw-btn--primary.
+// ============================================================================
+// Variables / Mixins
+// ============================================================================
+@mixin button-variant($font-color, $bg-color) {
+    color: $font-color;
+    background-color: $bg-color;
+    &:hover,
+    &:focus,
+    &:active:hover,
+    &:active:focus,
+    &:active {
+        color: $font-color;
+        background-color: lighten($bg-color, 5%);
+    }
+    &[disabled] {
+        &:hover,
+        &:focus,
+        &:active:hover,
+        &:active:focus,
+        &:active {
+            color: $font-color;
+            background-color: $bg-color;
+        }
+    }
+}
+
+// ============================================================================
+// DEFAULT-BUTTON
+// ============================================================================
+.btn.active, .btn:active {
+    box-shadow: none;
+}
+
+.bw-btn {
+    @include bw-text("button");
+    @include button-variant( $light, $brand-primary);
+    transition: all 0.2s ease-out;
+    // Layout
+    display: inline-block;
+    height: $bw-btn-height;
+    padding: 0 $bw-btn-padding-horizontal;
+    margin-top: $bw-btn-margin-vertical;
+    margin-bottom: $bw-btn-margin-vertical;
+    // Look and feel
+    border: none;
+    border-radius: $bw-btn-border-radius;
+    cursor: pointer;
+    touch-action: manipulation;
+    background-image: none; // reset unusual Firefox-on-Android
+    // Typography
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: none;
+    letter-spacing: inherit;
+    line-height: $bw-btn-height;
+    text-transform: uppercase;
+    // For ripples
+    position: relative;
+    overflow: hidden;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        text-decoration: none;
+        color: $bw-btn-default-font-color;
+        box-shadow: 0 16px 35px rgba(5,16,57,0.08), 0 24px 55px rgba(5,16,57,0.06);
+    }
+    &:hover,
+    &:focus {
+
+    }
+    &:active {
+
+    }
+    &:disabled,
+    &.bw--is-disabled {
+        cursor: default;
+        pointer-events: none;
+        opacity: 0.60;
+        box-shadow: none;
+    }
+}
+
+.btn,
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: none;
+}
+
+
+
+// ============================================================================
+// BUTTON-STYLES
+// ============================================================================
+.bw-btn--primary {
+    @include button-variant( $light, $brand-danger);
+}
+
+.bw-btn--success {
+    @include button-variant( $light, $night);
+}
+
+.bw-btn--light {
+    @include button-variant( $night, $light);
+}

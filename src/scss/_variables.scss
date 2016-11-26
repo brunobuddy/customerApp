@@ -3,9 +3,8 @@
 *    VARIABLES
 *
 *       #Colors
-*       #Colors btn
-*       #Fonts
-*       #Btn
+*       #Buttons
+*
 */
 
 
@@ -28,3 +27,15 @@ $brand-success:             #4CD684 !default;
 $brand-info:                #A2EED9 !default;
 $brand-warning:             #E9D186 !default;
 $brand-danger:              #E4554D !default;
+
+
+// ----------------------
+// BUTTONS
+// ----------------------
+
+$bw-btn-height: 54px;
+$bw-btn-padding-horizontal: 30px;
+$bw-btn-margin-vertical: 0;
+$bw-btn-margin-horizontal: $bw-btn-margin-vertical;
+$bw-btn-border-radius: 0;
+$bw-btn-default-font-color: $light;
