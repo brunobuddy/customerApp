@@ -1,4 +1,10 @@
-// Type Properties
+/**
+*    TYPE
+*       #Font size
+*       #Font color
+*       #Font type
+*
+*/
 
 $bw-base-font-size : 10px;
 $bw-base-line-height: 1.5;
@@ -120,7 +126,7 @@ $letter-spacing : ('0', 0),
 
 
 // **************************
-// Font Size
+// Font Color
 // **************************
 
 // White and Black
@@ -136,3 +142,14 @@ $letter-spacing : ('0', 0),
 .text-info { color: #A2EED9;}
 .text-warning { color: #E9D186;}
 .text-danger { color: #E4554D;}
+
+
+// **************************
+// Font Type
+// **************************
+
+.bold {font-weight: bold;}
+.regular {font-weight: 400;}
+.thin, .light {font-weight: 300;}
+.italic {font-style: italic;}
+.normal {font-style: normal;}
