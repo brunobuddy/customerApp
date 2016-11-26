@@ -65,8 +65,8 @@
     vertical-align: middle;
     white-space: nowrap;
     user-select: none;
-    letter-spacing: inherit;
-    line-height: $bw-btn-height;
+    letter-spacing: 0.4px;
+    line-height: $bw-btn-height - 6px;
     text-transform: uppercase;
     // For ripples
     position: relative;
@@ -79,12 +79,10 @@
         color: $bw-btn-default-font-color;
         box-shadow: 0 16px 35px rgba(5,16,57,0.08), 0 24px 55px rgba(5,16,57,0.06);
     }
-    &:hover,
-    &:focus {
-
-    }
-    &:active {
-
+    & i {
+        font-size: 21px;
+        position: relative;
+        top: 3.2px;
     }
     &:disabled,
     &.bw--is-disabled {
