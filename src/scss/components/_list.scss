@@ -1,8 +1,16 @@
 /**
 *    LIST
 *
+*       #Media
+*       #Panel
+*
 */
 
+
+
+//*********************
+//    MEDIA
+//*********************
 
 .panel-body {
     position: relative;
@@ -39,8 +47,22 @@
     }
 }
 .media.partner {
-    border-top: 1px solid $brand-primary;
+    border-top: 1px solid $cloud;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 20px;
+}
+
+
+//*********************
+//    PANEL
+//*********************
+
+.panel-group .panel {
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    + .panel {
+        margin-top: 0;
+    }
 }
