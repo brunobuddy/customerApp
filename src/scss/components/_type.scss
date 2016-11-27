@@ -5,3 +5,51 @@
 *       #Alignment
 *
 */
+
+
+.wallet {
+    &__value {
+        @extend h1;
+        position: relative;
+        line-height: 96px;
+        @include media-sm {
+            line-height: 136px;
+        }
+        &:after {
+            content: ' ';
+            position: absolute;
+            left: calc(50% - 48px);
+            z-index: -1;
+            display: inline-block;
+            width: 96px;
+            height: 96px;
+            @extend .bg-success;
+            border-radius: 50%;
+
+            @include media-sm {
+                width: 136px;
+                height: 136px;
+                left: calc(50% - 68px);
+            }
+        }
+    }
+    &__currency {
+        position: absolute;
+        left: calc(50% - 48px);
+        width: 24px;
+        height: 24px;
+        @extend .bg-primary;
+        @extend .text-light;
+        border-radius: 50%;
+        @include bw-text(body2);
+        line-height: 25px;
+
+        @include media-sm {
+            width: 36px;
+            height: 36px;
+            left: calc(50% - 68px);
+            @include bw-text(headline2);
+            line-height: 37px;
+        }
+    }
+}

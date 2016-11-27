@@ -1,7 +1,7 @@
 /**
 *    Headings
 *
-*    #General
+*    #Headings
 */
 
 
@@ -14,9 +14,16 @@
     margin-bottom: $m-b;
 }
 
-h1,
-.h1 {
+h1 {
     @include bw-text(display3);
+    @extend %m-y-headings;
+    @extend .bold;
+    @include media-xs {
+        @include bw-text(display2);
+    }
+}
+h2 {
+    @include bw-text(display1);
     @extend %m-y-headings;
     @extend .bold;
     @include media-xs {
@@ -24,8 +31,7 @@ h1,
     }
 }
 
-h2, h3, h4,
-.h2, .h3, .h4{
+h3, h4 {
     @include bw-text(headline2);
     @extend %m-y-headings;
     @extend .bold;
@@ -34,13 +40,20 @@ h2, h3, h4,
     }
 }
 
-h5, h6,
-.h5, .h6 {
+h5, .tiny {
     @include bw-text(title);
     @extend %m-y-headings;
     @extend .bold;
     text-transform: uppercase;
     @include media-xs {
         @include bw-text(body2);
+    }
+}
+h6, .shy {
+    @include bw-text(body2);
+    @extend %m-y-headings;
+    @extend .bold;
+    @include media-xs {
+        @include bw-text(body1);
     }
 }
