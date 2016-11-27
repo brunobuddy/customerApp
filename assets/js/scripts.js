@@ -19,7 +19,7 @@ $(document).ready(function () {
     var token = getUrlParameter('token');
 
     // display barCode
-    if ($('barcode').length) {
+    if ($('#barcode').length) {
         JsBarcode("#barcode", token, {
             height: 70,
             displayValue: false
