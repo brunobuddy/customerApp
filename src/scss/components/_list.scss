@@ -6,6 +6,7 @@
 
 .panel-body {
     position: relative;
+
     &__content {
         display: inline-block;
         width: calc(100% - 45px);
@@ -16,13 +17,12 @@
     }
     &__toggle {
         position: absolute;
-        top: 10px;
+        top: -20px;
         display: inline-block;
         width: 35px;
         @include media-sm {
             width: 15%;
             text-align: right;
-            top: 14px;
         }
         i {
             @include media-sm {
@@ -37,4 +37,10 @@
             padding-left: 90px;
         }
     }
+}
+.media.partner {
+    border-top: 1px solid $brand-primary;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
 }

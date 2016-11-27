@@ -51,10 +51,10 @@ header {
 .partner {
     img {
         width: 64px;
-        height: 64px;
+        height: auto;
         @include media-sm {
             width: 104px;
-            height: 104px;
+            height: auto;
         }
     }
 }

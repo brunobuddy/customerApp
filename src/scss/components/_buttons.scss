@@ -121,4 +121,9 @@
 }
 .btn-collapse {
     font-size: 2.8rem;
+    &.collapsed {
+        i.ion-ios-minus-empty:before {
+            content:'\f489';
+        }
+    }
 }
