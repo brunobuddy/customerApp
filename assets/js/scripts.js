@@ -18,10 +18,13 @@ $(document).ready(function () {
 
     var token = getUrlParameter('token');
 
-    JsBarcode("#barcode", token, {
-        height: 70,
-        displayValue: false
-    });
+    // display barCode
+    if ($('barcode').length) {
+        JsBarcode("#barcode", token, {
+            height: 70,
+            displayValue: false
+        });
+    }
 
     // Refresh data by making regular API Calls for VO. V1 will be using socket.io
     function refresh() {
@@ -29,8 +32,9 @@ $(document).ready(function () {
         $.get("http://146.185.143.127/api/customers/" + token, function (results) {
             $("#full-name").html(results.first_name + ' ' + results.last_name);
             $("#amount").html(results.amount);
+            $('#list-link').attr('href', '/list.html?token=' + results.token);
 
-            console.log(initialAmount, results.amount);
+            // display flash message
             if (initialAmount !== '0' && initialAmount != results.amount) {
                 $("#notification").slideDown("slow", function () {
                     $(function () {
@@ -48,6 +52,17 @@ $(document).ready(function () {
     setInterval(function () {
         refresh();
     }, 3000);
+
+    // accordion
+    $('#myCollapsible').collapse({
+        toggle: true
+    });
+
+
+    $('#back-link').click(function () {
+        console.log('lhljs');
+        window.location.href = '/?token=' + token;
+    });
 });
 
 

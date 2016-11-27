@@ -1,4 +1,68 @@
 /**
 *    LIST
 *
+*       #Media
+*       #Panel
+*
 */
+
+
+
+//*********************
+//    MEDIA
+//*********************
+
+.panel-body {
+    position: relative;
+
+    &__content {
+        display: inline-block;
+        width: calc(100% - 45px);
+
+        @include media-sm {
+            width: 74%;
+        }
+    }
+    &__toggle {
+        position: absolute;
+        top: -20px;
+        display: inline-block;
+        width: 35px;
+        @include media-sm {
+            width: 15%;
+            text-align: right;
+        }
+        i {
+            @include media-sm {
+                position: relative;
+                top: 4px;
+            }
+        }
+    }
+    &--collapsed {
+        padding-left: 130px;
+        @include media-xs {
+            padding-left: 90px;
+        }
+    }
+}
+.media.partner {
+    border-top: 1px solid $cloud;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 20px;
+}
+
+
+//*********************
+//    PANEL
+//*********************
+
+.panel-group .panel {
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    + .panel {
+        margin-top: 0;
+    }
+}
