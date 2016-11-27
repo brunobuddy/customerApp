@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function () {
 
     // helper to get URL parameters
     var getUrlParameter = function getUrlParameter(sParam) {
@@ -19,17 +19,35 @@ $( document ).ready(function() {
     var token = getUrlParameter('token');
 
     JsBarcode("#barcode", token, {
-        // width:252,
-        height:70,
+        height: 70,
         displayValue: false
     });
 
-    // $.get( "http://146.185.143.127", function( data ) {
-    //     $( ".result" ).html( data );
-    //     alert( "Load was performed." );
-    // });
+    // Refresh data by making regular API Calls for VO. V1 will be using socket.io
+    function refresh() {
+        var initialAmount = $("#amount").html();
+        $.get("http://146.185.143.127/api/customers/" + token, function (results) {
+            $("#full-name").html(results.first_name + ' ' + results.last_name);
+            $("#amount").html(results.amount);
 
+            console.log(initialAmount, results.amount);
+            if (initialAmount !== '0' && initialAmount != results.amount) {
+                $("#notification").slideDown("slow", function () {
+                    $(function () {
+                        setTimeout(function () {
+                            $("#notification").slideUp("slow", function () {
+                            });
+                        }, 2000);
+                    });
+                });
+            }
+        });
+    }
 
+    refresh();
+    setInterval(function () {
+        refresh();
+    }, 3000);
 });
 
 
