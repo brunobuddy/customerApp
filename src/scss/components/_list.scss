@@ -2,3 +2,39 @@
 *    LIST
 *
 */
+
+
+.panel-body {
+    position: relative;
+    &__content {
+        display: inline-block;
+        width: calc(100% - 45px);
+
+        @include media-sm {
+            width: 74%;
+        }
+    }
+    &__toggle {
+        position: absolute;
+        top: 10px;
+        display: inline-block;
+        width: 35px;
+        @include media-sm {
+            width: 15%;
+            text-align: right;
+            top: 14px;
+        }
+        i {
+            @include media-sm {
+                position: relative;
+                top: 4px;
+            }
+        }
+    }
+    &--collapsed {
+        padding-left: 130px;
+        @include media-xs {
+            padding-left: 90px;
+        }
+    }
+}

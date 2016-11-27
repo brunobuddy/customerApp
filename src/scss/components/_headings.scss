@@ -43,13 +43,22 @@ h3, h4,
     }
 }
 
-h5, h6,
-.h5, .h6 {
+h5,
+.h5 {
     @include bw-text(title);
     @extend %m-y-headings;
     @extend .bold;
     text-transform: uppercase;
     @include media-xs {
         @include bw-text(body2);
+    }
+}
+h6,
+.h6 {
+    @include bw-text(body2);
+    @extend %m-y-headings;
+    @extend .bold;
+    @include media-xs {
+        @include bw-text(body1);
     }
 }

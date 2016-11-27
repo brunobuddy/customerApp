@@ -26,6 +26,10 @@ body {
     }
 }
 
+header {
+    height: $bar;
+}
+
 .branded {
     header {
         height: $headerHome;
@@ -40,6 +44,17 @@ body {
         }
     }
     footer {
-        height: $footerHome;
+        height: $bar;
+    }
+}
+
+.partner {
+    img {
+        width: 64px;
+        height: 64px;
+        @include media-sm {
+            width: 104px;
+            height: 104px;
+        }
     }
 }
